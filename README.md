@@ -53,17 +53,3 @@ Voce pode desenvolver utilizando os recursos abaixo:
 ========================================================================
 - Java 11
 - Maven
-
-Banco de dados
-==========================================================================
-
-Como acessar o client do MySQL:
-
-	
-JDBC URL: jdbc:mysql://31.220.109.68:3306/treinamentoindra
-
-Usuário: treinamentoindra
-
-Senha: treinamentoindra
-
-PhpMyAdmin: http://31.220.109.68/phpmyadmin/
