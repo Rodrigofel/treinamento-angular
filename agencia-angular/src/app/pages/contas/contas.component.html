@@ -2,7 +2,6 @@
 <table class="table table-striped">
   <thead>
     <tr>
-
       <th scope="col">Agencia</th>
       <th scope="col">Numero</th>
       <th scope="col">Saldo</th>
@@ -12,12 +11,22 @@
   </thead>
   <tbody>
     <tr *ngFor="let contas of contas">
-
       <td>{{ contas.agencia }}</td>
       <td>{{ contas.numero }}</td>
       <td>{{ contas.saldo }}</td>
       <td>{{ contas.cliente.nome }}</td>
       <td>{{ contas.cliente.email }}</td>
+      <td>
+        <div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+          Ações
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+          <li><a class="dropdown-item" [routerLink]="['saque', contas.id]">Sacar</a></li>
+          <li><a class="dropdown-item"  [routerLink]="['deposito', contas.id]">Depositar</a></li>
+        </ul>
+      </div>
+    </td>
     </tr>
   </tbody>
 </table>

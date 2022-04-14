@@ -20,7 +20,7 @@ public class ClienteService extends GenericCrudService<Cliente, Long, ClienteRep
 	public Cliente salvar(Cliente cli) throws AplicacaoException {
 		
 		Cliente c = this.buscarCliente(cli.getCpf());
-		 
+		/* 
 		if (c != null) {
 			
 			if (cli.getId() == null) {
@@ -30,7 +30,7 @@ public class ClienteService extends GenericCrudService<Cliente, Long, ClienteRep
 			if (!cli.getId().equals(c.getId())) {
 				throw new AplicacaoException(ExceptionValidacoes.ERRO_CPF_JA_CADASTRADO);
 			}
-		}
+		}*/
 		
 		return super.salvar(cli);
 	}
@@ -44,10 +44,10 @@ public class ClienteService extends GenericCrudService<Cliente, Long, ClienteRep
 		}
 
 		Cliente cliente = repository.findByCpf(cpf);
-
+/*
 		if (cliente == null) {
 			throw new AplicacaoException(ExceptionValidacoes.ALERTA_NENHUM_REGISTRO_ENCONTRADO);
-		}
+		}*/
 
 		return cliente;
 	}
