@@ -2,11 +2,11 @@
 <form [formGroup]="formConta" (ngSubmit)="enviar()">
   <div class="mb-3">
     <label for="Agencia" class="form-label">Agencia</label>
-    <input type="text" class="form-control" id="agencia" formControlName ="agencia">
+    <input readonly type="text" class="form-control" id="agencia" formControlName ="agencia">
   </div>
   <div class="mb-3">
     <label for="numero" class="form-label">Número</label>
-    <input type="text" class="form-control" id="numero" formControlName ="numero">
+    <input readonly type="text" class="form-control" id="numero" formControlName ="numero">
   </div>
   <div class="mb-3">
     <label for="saldo" class="form-label">Saldo</label>

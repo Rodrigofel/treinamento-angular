@@ -1,3 +1,4 @@
+import { TransferenciaComponent } from './pages/transferencia/transferencia.component';
 import { ContasComponent } from './pages/contas/contas.component';
 import { ClientesComponent } from './pages/clientes/clientes.component';
 import { NgModule } from '@angular/core';
@@ -13,8 +14,9 @@ const routes: Routes = [
   {path:'contas/saque/:id', component:ContasSaqueDepositoComponent  },
   {path:'contas/deposito/:id', component:ContasSaqueDepositoComponent  },
   {path:'contas/saque', component:ContasSaqueDepositoComponent  },
-  {path:'contas/deposito', component:ContasSaqueDepositoComponent  }
-
+  {path:'contas/deposito', component:ContasSaqueDepositoComponent  },
+  {path:'contas/transferencia/:id', component:TransferenciaComponent  },
+  {path:'contas/transferencia', component:TransferenciaComponent  }
 ];
 
 @NgModule({

@@ -36,7 +36,6 @@ export class ContasSaqueDepositoComponent implements OnInit {
 
   ngOnInit(): void {
    const id = Number(this.activatedRoute.snapshot.paramMap.get('id'));
-
       this.contasService.consultarContaPorId(id).subscribe(
         (result: IConta) => {
           this.formConta = this.preencheFormGroup(result);

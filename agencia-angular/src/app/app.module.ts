@@ -9,6 +9,7 @@ import {HttpClientModule} from "@angular/common/http";
 import { ClientesCadastrarEditarComponent } from './pages/clientes/clientes-cadastrar-editar/clientes-cadastrar-editar.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ContasSaqueDepositoComponent } from './pages/contas/contas-saque-deposito/contas-saque-deposito.component';
+import { TransferenciaComponent } from './pages/transferencia/transferencia.component';
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import { ContasSaqueDepositoComponent } from './pages/contas/contas-saque-deposi
     ClientesComponent,
     ContasComponent,
     ClientesCadastrarEditarComponent,
-    ContasSaqueDepositoComponent
+    ContasSaqueDepositoComponent,
+    TransferenciaComponent
   ],
   imports: [
     BrowserModule,

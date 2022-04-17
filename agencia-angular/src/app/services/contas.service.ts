@@ -1,3 +1,4 @@
+import { ITransferencia } from './../interfaces/transferencia.service';
 import { ISaqueDeposito } from './../interfaces/saque-deposito';
 import { IConta } from './../interfaces/conta';
 import { environment } from 'src/environments/environment';
@@ -24,5 +25,8 @@ export class ContasService {
   }
   consultarContaPorId(id: number){
     return this.http.get<IConta>(`${this.api}/${this.endpoint}/${id}`);
+  }
+  transferir(transferencia: ITransferencia){
+    return this.http.put(`${this.api}/${this.endpoint}/transferencia`, transferencia);
   }
 }
