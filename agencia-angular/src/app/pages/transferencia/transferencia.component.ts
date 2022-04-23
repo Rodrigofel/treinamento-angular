@@ -57,13 +57,32 @@ export class TransferenciaComponent implements OnInit {
     enviar() {
 
       const transferencia: ITransferencia = this.formTransferencia.value;
-
+      if(transferencia.valor <= 0){
+         Swal.fire({
+          icon: 'error',
+          title: 'Oops...',
+          text: 'Valor errado!'
+        })
+      }else if(transferencia.agenciaDestino == '' || transferencia.numeroContaDestino ==''){
+        Swal.fire({
+          icon: 'error',
+          title: 'Oops...',
+          text: 'Agencia ou número da conta inválido'
+        })
+      }else
       this.contasService.transferir(transferencia).subscribe((result) => {
         Swal.fire(
           'Sucesso','Trasnferencia realizado', 'success'
         );
         this.router.navigate(['/contas']);
+      }, error => {
+        Swal.fire({
+          icon: 'error',
+          title: 'Oops...',
+          text: 'Agencia ou número da conta inválido'
+        })
       });
 
     }
+
 }

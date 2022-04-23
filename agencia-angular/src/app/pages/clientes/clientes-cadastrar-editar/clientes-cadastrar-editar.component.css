@@ -1,0 +1,7 @@
+#nome, #email, #cpf, #observacoes{
+  width: 75%;
+  margin-left: 0.5%;
+}
+label,p,button {
+  margin-left: 0.5%;
+}

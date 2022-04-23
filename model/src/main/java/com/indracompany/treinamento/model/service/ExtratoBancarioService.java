@@ -20,21 +20,21 @@ public class ExtratoBancarioService extends GenericCrudService<ExtratoBancario, 
 	@Autowired
 	private ContaBancariaService contaBancariaService;
 	
-	public void salvarExtrato (String tipo_de_mov, String agencia, String numero,double valor ) {
+	public void salvarExtrato (String tipoDeMov, String agencia, String numero,double valor ) {
 		if(valor > 0) {
 			ExtratoBancario extrato = new ExtratoBancario();
 			ContaBancaria conta = contaBancariaService.consultarConta(agencia, numero);
-			extrato.setTipo_de_mov(tipo_de_mov);
-			LocalDate dt_now = LocalDate.now();
-			extrato.setData_de_movimentacao(dt_now);
+			extrato.setTipo_de_mov(tipoDeMov);
+			LocalDate dtAgora = LocalDate.now();
+			extrato.setData_de_movimentacao(dtAgora);
 			extrato.setValor(valor);
 			extrato.setContaBancaria(conta);
 			super.salvar(extrato);
 		}
 	}
 	
-	public List<ConsultaExtratoBancarioDTO> obterExtratoPorAgenciaNumeroDataInicioDataFim(String agencia, String numero, LocalDate dt_inicio, LocalDate dt_fim){
-		List<ExtratoBancario> listaExtrato = repository.findByAgenciaAndNumeroAndDataInicioAndDataFim(agencia, numero, dt_inicio, dt_fim);
+	public List<ConsultaExtratoBancarioDTO> obterExtratoPorAgenciaNumeroDataInicioDataFim(String agencia, String numero, LocalDate dtInicio, LocalDate dtFim){
+		List<ExtratoBancario> listaExtrato = repository.findByAgenciaAndNumeroAndDataInicioAndDataFim(agencia, numero, dtInicio, dtFim);
 		
 		if (listaExtrato == null || listaExtrato.isEmpty()) {
 			throw new AplicacaoException(ExceptionValidacoes.ALERTA_NENHUM_REGISTRO_ENCONTRADO);

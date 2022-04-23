@@ -10,8 +10,8 @@ import lombok.Data;
 public class SalvaExtratoBancariaDTO implements Serializable{
 	
 	private static final long serialVersionUID = 7241234582609797095L;
-	private LocalDate data_de_movimentacao;
-	private String tipo_de_mov;
+	private LocalDate dataDeMovimentacao;
+	private String tipoDeMov;
 	private double valor;
 
 }

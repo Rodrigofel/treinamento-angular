@@ -1,0 +1,13 @@
+p,label,button {
+  margin-left: 0.5%;
+}
+
+table{
+  width: 99%;
+  margin-left: 0.5%;
+}
+
+#agencia, #numero, #saldo, #valor{
+  width: 75%;
+  margin-left: 0.5%;
+}

@@ -75,9 +75,9 @@ public class ContaBancariaRest extends GenericCrudRest<ContaBancaria, Long, Cont
 	
 
 	@GetMapping(value = "/consultarExtratoPorAgenciaNumeroDataInicioDataFim/{agencia}/{numeroConta}/{dt_inicio}/{dt_fim}", produces = MediaType.APPLICATION_JSON_VALUE)
-	public @ResponseBody ResponseEntity<List<ConsultaExtratoBancarioDTO>> consultarExtratoPorAgenciaNumeroDataInicioDataFim(String agencia,String numeroConta,String dt_inicio, String dt_fim){
-		LocalDate dataInicio = LocalDate.parse(dt_inicio);
-		LocalDate dataFim = LocalDate.parse(dt_fim);
+	public @ResponseBody ResponseEntity<List<ConsultaExtratoBancarioDTO>> consultarExtratoPorAgenciaNumeroDataInicioDataFim(String agencia,String numeroConta,String dtInicio, String dtFim){
+		LocalDate dataInicio = LocalDate.parse(dtInicio);
+		LocalDate dataFim = LocalDate.parse(dtFim);
 		
 		List<ConsultaExtratoBancarioDTO> dto = extratoBancarioService.obterExtratoPorAgenciaNumeroDataInicioDataFim(agencia,numeroConta,dataInicio,dataFim);
 		

@@ -1,5 +1,5 @@
 <p>Meus Clientes</p>
-<a class="btn btn-dark" routerLink="cadastrar">Novo</a>
+<a class="btn btn-primary" routerLink="cadastrar">Novo</a>
 <table class="table table-striped">
   <thead>
     <tr>
@@ -20,9 +20,9 @@
       <td>{{ cliente.observacoes }}</td>
       <td>
         <div class="dropdown">
-        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+        <b class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
           Ações
-        </button>
+        </b>
         <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
           <li><a class="dropdown-item" [routerLink]="['editar', cliente.id]">Editar</a></li>
           <li><a class="dropdown-item" (click)="confirmar(cliente.id)">Remover</a></li>
